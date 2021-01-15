@@ -1,0 +1,12 @@
+/* ==== Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f2f5;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
