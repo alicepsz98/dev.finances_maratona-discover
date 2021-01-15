@@ -10,6 +10,11 @@ body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
 /* ==== Header ==== */
 header {
   background: #2d4a22;
@@ -22,3 +27,5 @@ header {
   font-weight: 100;
   font-size: 150%;
 }
+
+
