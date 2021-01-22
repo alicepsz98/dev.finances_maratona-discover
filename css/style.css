@@ -150,9 +150,7 @@ table tbody tr:hover{
 
 table td {
   background: #fff;
-  padding: 0.3rem 0.6rem;
-  width: 20px;
-  
+  padding: 0.5rem 0.6rem;
   text-align: center;
 }
 
@@ -166,6 +164,31 @@ td.income{
 
 td.expense{
   color: #e92929;
+}
+/* ==== Modal ==== */
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #f0f2f5;
+  padding: 2.4rem;
 }
 
 /* ==== Footer ==== */
