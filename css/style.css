@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 93.75%;
+}
+
 body {
   background: #f0f2f5;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -26,9 +30,12 @@ body {
   border-width: 0;
 }
 
+main.container {
+  margin: 0 auto;
+}
+
 .container {
   width: min(90vw, 800px);
-  margin: auto;
 }
 
 /* ==== Titles ==== */
@@ -108,6 +115,8 @@ header {
 /* ==== Table ==== */
 #data-table {
   width: 100%;
+  font-size: 70%;
+  margin: auto;
   border-spacing: 0 0.5rem;
   color: #969cb3;
 }
@@ -126,7 +135,8 @@ table th {
   background: #fff;
   font-weight: normal;
   padding: 1rem 2rem;
-  text-align: left;
+  text-align: center;
+  color: #1e2233;
 }
 
 table tbody tr {
@@ -139,7 +149,10 @@ table tbody tr:hover{
 
 table td {
   background: #fff;
-  padding: 1rem 2rem;
+  padding: 0.3rem 0.6rem;
+  width: 20px;
+  
+  text-align: center;
 }
 
 td.description {
@@ -160,4 +173,47 @@ footer {
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
+}
+
+/* ==== Responsive ==== */
+@media (min-width: 400px) {
+  #data-table {
+    font-size: 78%;
+  }
+}
+
+@media (min-width: 600px) {
+  #data-table {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+  
+  .container {
+    width: min(78vw, 800px);
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .card p {
+    font-size: 150%;
+  }
+}
+
+@media (min-width: 900px) {
+  .card p {
+    font-size: 180%;
+  }
+
+  #data-table {
+    font-size: 98%;
+  }
 }
