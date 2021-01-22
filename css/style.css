@@ -115,10 +115,11 @@ header {
 /* ==== Table ==== */
 #data-table {
   width: 100%;
-  font-size: 70%;
+  font-size: 60%;
   margin: auto;
   border-spacing: 0 0.5rem;
   color: #969cb3;
+  overflow: hidden;
 }
 
 table thead tr th:first-child, 
@@ -134,7 +135,7 @@ table thead tr td:last-child {
 table th {
   background: #fff;
   font-weight: normal;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.6rem;
   text-align: center;
   color: #1e2233;
 }
