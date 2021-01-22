@@ -39,6 +39,21 @@ h2 {
   font-weight: normal;
 }
 
+/* ==== Links & Buttons ==== */
+a {
+  color: #49aa26;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3dd705; 
+}
+
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
 /* ==== Header ==== */
 header {
   background: #2d4a22;
@@ -74,6 +89,9 @@ header {
 .card h3 {
   font-weight: normal;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card p {
@@ -97,6 +115,11 @@ header {
 table thead tr th:first-child, 
 table thead tr td:first-child {
   border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child, 
+table thead tr td:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 
 table th {
