@@ -97,7 +97,7 @@ button:hover {
 /* ==== Header ==== */
 header {
   background: #2d4a22;
-  padding: 2rem 0 10rem;
+  padding: 4rem 0 12rem;
   text-align: center;
 }
 
@@ -269,10 +269,9 @@ input {
 
 /* ==== Footer ==== */
 footer {
-  width: 100%;
   text-align: center;
-  position: fixed;
-  bottom: 0;
+  margin-top: 100px;
+  margin-bottom: 0;
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
@@ -309,6 +308,12 @@ footer {
 
   .card p {
     font-size: 150%;
+  }
+
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
   }
 }
 

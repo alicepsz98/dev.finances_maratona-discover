@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap" rel="stylesheet">
-  <script src="./js/script.js"></script>
+  <script defer src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <title>dev.finance$</title>
 </head>
@@ -15,7 +15,7 @@
     <img src="./assets/logo.svg" alt="Logo da dev.finances">
   </header>
   <main class="container">
-    <div class="modal-overlay ">
+    <div class="modal-overlay">
       <div class="modal">
         <div id="form">
           <h2>Nova Transação</h2>
@@ -49,7 +49,7 @@
               />
             </div>
             <div class="input-group actions">
-              <a href="#" class="button cancel">Cancelar</a>
+              <a onclick="Modal.close()" href="#" class="button cancel">Cancelar</a>
               <button>Salvar</button>
             </div>
           </form>
@@ -82,7 +82,7 @@
     </section>
     <section id="transaction">
       <h2 class="sr-only">Transações</h2>
-      <a href="#" class="button new">+ Nova Transação</a>
+      <a href="#" class="button new" onclick="Modal.open()">+ Nova Transação</a>
       <table id="data-table">
         <thead>
           <tr>
