@@ -264,11 +264,15 @@ input {
 
 /* ==== Footer ==== */
 footer {
+  width: 100%;
   text-align: center;
+  position: fixed;
+  bottom: 0;
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
 }
+
 
 /* ==== Responsive ==== */
 @media (min-width: 400px) {
