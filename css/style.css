@@ -1,6 +1,9 @@
 /* ==== Reset ==== */
 :root {
   --dark-blue: #363f5f;
+  --green: #49aa26;
+  --light-green: #3dd705;
+  --red: #e92929;
 }
 * {
   margin: 0;
@@ -48,12 +51,27 @@ h2 {
 
 /* ==== Links & Buttons ==== */
 a {
-  color: #49aa26;
+  color: var(--green);
   text-decoration: none;
 }
 
 a:hover {
-  color: #3dd705; 
+  color: var(--light-green); 
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background: var(--green);
+  padding: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--light-green);
 }
 
 .button.new {
@@ -61,10 +79,25 @@ a:hover {
   margin-bottom: .8rem;
 }
 
+.button.cancel {
+  color: var(--red);
+  border: 2px var(--red) solid;
+  border-radius: 0.25rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.button.cancel:hover{
+  opacity: 1;
+}
+
 /* ==== Header ==== */
 header {
   background: #2d4a22;
-  padding: 2rem 0 10rem;
+  padding: 4rem 0 12rem;
   text-align: center;
 }
 
@@ -108,7 +141,7 @@ header {
 }
 
 .card.total {
-  background: #49AA26;
+  background: var(--green);
   color: #fff;
 }
 
@@ -163,8 +196,13 @@ td.income{
 }
 
 td.expense{
-  color: #e92929;
+  color: var(--red);
 }
+
+td img {
+  cursor: pointer;
+}
+
 /* ==== Modal ==== */
 .modal-overlay {
   width: 100%;
@@ -189,15 +227,56 @@ td.expense{
 .modal {
   background: #f0f2f5;
   padding: 2.4rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* ==== Form ==== */
+#form {
+  max-width: 500px;
+}
+
+#form h2 {
+  margin-top: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.input-group {
+  margin-top: 0.8rem;
+}
+
+.input-group small {
+  opacity: 0.5;
+}
+
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+  width: 48%;
 }
 
 /* ==== Footer ==== */
 footer {
   text-align: center;
+  margin-top: 100px;
+  margin-bottom: 0;
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
 }
+
 
 /* ==== Responsive ==== */
 @media (min-width: 400px) {
@@ -229,6 +308,12 @@ footer {
 
   .card p {
     font-size: 150%;
+  }
+
+  footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
   }
 }
 
