@@ -2,6 +2,7 @@
 :root {
   --dark-blue: #363f5f;
   --green: #49aa26;
+  --blue: #1f8ac0;
   --light-green: #3dd705;
   --red: #e92929;
 }
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-  background: #f0f2f5;
+  background: #d5d6d6;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
@@ -51,12 +52,12 @@ h2 {
 
 /* ==== Links & Buttons ==== */
 a {
-  color: var(--green);
+  color: #c51162;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--light-green); 
+  color: #880b43; 
 }
 
 button {
@@ -64,14 +65,14 @@ button {
   height: 50px;
   border: none;
   color: white;
-  background: var(--green);
+  background: #ff548d;
   padding: 0;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
 button:hover {
-  background: var(--light-green);
+  background: #f878cd;
 }
 
 .button.new {
@@ -80,8 +81,8 @@ button:hover {
 }
 
 .button.cancel {
-  color: var(--red);
-  border: 2px var(--red) solid;
+  color: #7a1717;
+  border: 2px #7a1717 solid;
   border-radius: 0.25rem;
   height: 50px;
   display: flex;
@@ -96,7 +97,7 @@ button:hover {
 
 /* ==== Header ==== */
 header {
-  background: #2d4a22;
+  background: #c51162;
   padding: 4rem 0 12rem;
   text-align: center;
 }
@@ -141,7 +142,7 @@ header {
 }
 
 .card.total {
-  background: var(--green);
+  background: #ff548d;
   color: #fff;
 }
 
@@ -227,7 +228,7 @@ td img {
 .modal {
   background: #f0f2f5;
   padding: 2.4rem;
-  width: 90%;
+  width: 95%;
   max-width: 500px;
 }
 
