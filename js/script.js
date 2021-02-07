@@ -13,12 +13,13 @@ const Modal = {
   }
 }
 
+
 const Transaction = {
   incomes() {
-
+    
   },
   expanses() {
-
+    
   },
   total() {
 
@@ -41,21 +42,26 @@ const transactions = [
   {
     id: 3,
     description: 'Internet',
-    amount: -10000,
-    date: '23/01/2021'
+    amount: 10000,
+    date: '23/02/2021'
   },
+  
 ]
 
 const dom = {
+  transactionContainer: document.querySelector('#data-table tbody'),
   addTransaction(transaction, index) {
     const tr = document.createElement('tr')
-    tr.innerHTML = dom.innerHTMLTransaction()
+    tr.innerHTML = dom.innerHTMLTransaction(transaction)
+    dom.transactionContainer.appendChild(tr)
   },
-  innerHTMLTransaction() {
+  innerHTMLTransaction(transaction) {
+    const cssClass = transaction.amount > 0 ? "income" : "expense"
+    const amount = Utils.formatCurrency(transaction.amount)
     const html = `
-        <td class="description">Luz</td>
-        <td class="expense">- R$ 500,00</td>
-        <td class="date">23/01/2021</td>
+        <td class="description">${transaction.description}</td>
+        <td class=${cssClass}>${amount}</td>
+        <td class="date">${transaction.date}</td>
         <td>
           <img src="./assets/minus.svg" alt="Imagem de remoção de transação">
         </td>
@@ -63,3 +69,5 @@ const dom = {
     return html
   }
 }
+
+transactions.forEach(transaction => dom.addTransaction(transaction))
