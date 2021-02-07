@@ -13,16 +13,27 @@ const Modal = {
   }
 }
 
-
 const Transaction = {
   incomes() {
-    
+    let income = 0
+    transactions.forEach(transaction => {
+      if (transaction.amount > 0) {
+        income += transaction.amount
+      }
+    })
+    return income
   },
-  expanses() {
-    
+  expenses() {
+    let expense = 0
+    transactions.forEach(transaction => {
+      if (transaction.amount < 0) {
+        expense += transaction.amount
+      }
+    })
+    return expense
   },
   total() {
-
+    return Transaction.incomes() + Transaction.expenses()
   }
 }
 
@@ -42,10 +53,27 @@ const transactions = [
   {
     id: 3,
     description: 'Internet',
-    amount: 10000,
+    amount: 1000,
     date: '23/02/2021'
   },
-  
+  {
+    id: 3,
+    description: 'Internet',
+    amount: 1000,
+    date: '23/02/2021'
+  },
+  {
+    id: 3,
+    description: 'Internet',
+    amount: 1040,
+    date: '23/02/2021'
+  },
+  {
+    id: 3,
+    description: 'Internet',
+    amount: 2390,
+    date: '23/02/2021'
+  }
 ]
 
 const dom = {
@@ -59,14 +87,25 @@ const dom = {
     const cssClass = transaction.amount > 0 ? "income" : "expense"
     const amount = Utils.currencyFormat(transaction.amount)
     const html = `
-        <td class="description">${transaction.description}</td>
-        <td class=${cssClass}>${amount}</td>
-        <td class="date">${transaction.date}</td>
-        <td>
-          <img src="./assets/minus.svg" alt="Imagem de remoção de transação">
-        </td>
+      <td class="description">${transaction.description}</td>
+      <td class=${cssClass}>${amount}</td>
+      <td class="date">${transaction.date}</td>
+      <td>
+        <img src="./assets/minus.svg" alt="Imagem de remoção de transação">
+      </td>
     `
     return html
+  },
+  updateBalance() {
+    document
+      .getElementById('income-display')
+      .innerHTML = Utils.currencyFormat(Transaction.incomes())
+    document
+      .getElementById('expense-display')
+      .innerHTML = Utils.currencyFormat(Transaction.expenses())
+    document
+      .getElementById('total-display')
+      .innerHTML = Utils.currencyFormat(Transaction.total())
   }
 }
 
@@ -84,3 +123,4 @@ const Utils = {
 }
 
 transactions.forEach(transaction => dom.addTransaction(transaction))
+dom.updateBalance()
