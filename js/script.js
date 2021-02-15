@@ -13,10 +13,24 @@ const Modal = {
   }
 }
 
-const transactions = []
-
 const Transaction = {
-  all: transactions,
+  all: [
+    {
+      description: 'website',
+      amount: -500,
+      date: '23/09/1998'
+    },
+    {
+      description: 'agua',
+      amount: 300,
+      date: '23/09/1998'
+    },
+    {
+      description: 'website',
+      amount: 500,
+      date: '23/09/1998'
+    }
+  ],
   add(transaction) {
     Transaction.all.push(transaction)
     App.reload()
@@ -85,6 +99,14 @@ const dom = {
 }
 
 const Utils = {
+  formatAmount() {
+    value = Number(value) * 100
+    return value
+  },
+  formatDate(date) {
+    const splittedDate = date.split("-")
+    return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+  },
   currencyFormat(value) {
     const signal = Number(value) < 0 ? "-" : ""
     value = String(value).replace(/\D/g, "")
@@ -94,6 +116,52 @@ const Utils = {
       currency: "BRL"
     })
     return signal + value
+  }
+}
+
+const Form = {
+  description: document.querySelector('input#description'),
+  amount: document.querySelector('input#amount'),
+  date: document.querySelector('input#date'),
+  getValues() {
+    return {
+      description: Form.description.value,
+      amount: Form.amount.value,
+      date: Form.date.value
+    }
+  },
+  validateFields() {
+    const { description, amount, date } = Form.getValues()
+    if (description.trim() === "" || amount.trim() === "" || date.trim() === "") {
+      throw new Error("Preencha todos os campos!")
+    }
+  },
+  formatValues() {
+    let { description, amount, date } = Form.getValues()
+    amount = Utils.formatAmount(amount)
+    date = Utils.formatDate()
+    return {
+      description,
+      amount,
+      date
+    }
+  },
+  clearFields() {
+    Form.description.value = ""
+    Form.amount.value = ""
+    Form.date.value = ""
+  },
+  submit(event) {
+    event.preventDefault()
+    try {
+      Form.validateFields()
+      const transaction = Form.formatValues()
+      Transaction.add(transaction)
+      Form.clearFields()
+      Modal.close()
+    } catch (err) {
+      alert(err.message)
+    }
   }
 }
 
@@ -110,10 +178,3 @@ const App = {
 
 App.init()
 
-Transaction.add(
-  {
-    description: "Telf",
-    amount: 2000,
-    date: "03/01/2022"
-  }
-)
