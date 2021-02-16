@@ -57,7 +57,7 @@ a {
 }
 
 a:hover {
-  color: #880b43; 
+  color: #b9145c; 
 }
 
 button {
@@ -72,7 +72,7 @@ button {
 }
 
 button:hover {
-  background: #f878cd;
+  background: #fa216a;
 }
 
 .button.new {
@@ -98,7 +98,7 @@ button:hover {
 /* ==== Header ==== */
 header {
   background: #c51162;
-  padding: 4rem 0 12rem;
+  padding: 4rem 0 11rem;
   text-align: center;
 }
 
@@ -228,7 +228,7 @@ td img {
 .modal {
   background: #f0f2f5;
   padding: 2.4rem;
-  width: 95%;
+  width: 92%;
   max-width: 500px;
 }
 
@@ -289,6 +289,9 @@ footer {
 @media (min-width: 600px) {
   #data-table {
     font-size: 90%;
+  }
+  header {
+    padding: 5rem 0 12rem;
   }
 }
 
