@@ -57,7 +57,7 @@ a {
 }
 
 a:hover {
-  color: #b9145c; 
+  color: #3399ff; 
 }
 
 button {
@@ -65,14 +65,14 @@ button {
   height: 50px;
   border: none;
   color: white;
-  background: #ff548d;
+  background: #3399ff;
   padding: 0;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
 button:hover {
-  background: #fa216a;
+  background: #ff3399;
 }
 
 .button.new {
@@ -97,8 +97,8 @@ button:hover {
 
 /* ==== Header ==== */
 header {
-  background: #c51162;
-  padding: 4rem 0 11rem;
+  background: linear-gradient(to top left, #3399ff 20%, #ff3399 110%);
+  padding: 4rem 0 10rem;
   text-align: center;
 }
 
@@ -125,6 +125,7 @@ header {
   border-radius: 0.25rem;
   margin-bottom: 2rem;
   color:  var(--dark-blue);
+  box-shadow: 0 0 5px rgb(107, 106, 106);
 }
 
 .card h3 {
@@ -142,7 +143,7 @@ header {
 }
 
 .card.total {
-  background: #ff548d;
+  background: #ff3399;
   color: #fff;
 }
 
