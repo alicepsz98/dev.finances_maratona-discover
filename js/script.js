@@ -15,18 +15,8 @@ const Modal = {
 }
 
 
-const Storage = {
-  get() {
-    return JSON.parse(localStorage.get("transactions")) || []
-  },
-  set(transactions) {
-    localStorage.setItem("transactions", JSON.stringify(transactions))
-  }
-}
-
-
 const Transaction = {
-  all: Storage.get(),
+  all: [],
   add(transaction) {
     Transaction.all.push(transaction)
     App.reload()
@@ -107,8 +97,8 @@ const dom = {
 
 const Utils = {
   formatAmount(value) {
-    value = Number(value.replace(/\,\./g, "")) * 100
-    return value
+    value = value * 100
+    return Math.round(value)
   },
 
   formatDate(date) {
@@ -184,7 +174,6 @@ const App = {
   init() {
     Transaction.all.forEach(dom.addTransaction)
     dom.updateBalance()
-    Storage.set(Transaction.all)
   },
 
   reload() {
