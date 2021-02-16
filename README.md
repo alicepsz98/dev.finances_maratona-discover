@@ -23,19 +23,13 @@
 
 ---
 
-<br>
-
 ![dev.finances](https://github.com/alicepsz98/dev.finances_maratona-discover/blob/master/mobile-dev.finances.gif)
-
-<br>
 
 ---
 
 ## 📝 O Projeto
 
 O dev.finances foi um projeto promovido pela Rocketseat. O projeto em si consiste em uma aplicação de controle financeiro, onde é possível cadastrar, excluir transações e ver o saldo de entrada e saída.
-
-<br>
 
 ---
 
@@ -54,8 +48,6 @@ O dev.finances foi um projeto promovido pela Rocketseat. O projeto em si consist
 ### Terminal 
 
 - Git Bash
-
-<br>
 
 ---
 
@@ -93,8 +85,6 @@ O dev.finances foi um projeto promovido pela Rocketseat. O projeto em si consist
   ❯ npm start
 ```
 
-<br>
-
 ---
 
 ## 🤝 Como contribuir
@@ -107,11 +97,7 @@ O dev.finances foi um projeto promovido pela Rocketseat. O projeto em si consist
 4. Envie sua branch:
    - `$ git push origin minha_feature`
 
-<br>
-
 ---
-
-<br>
 
 <p align="center">
   Por Alice Souza 💚
