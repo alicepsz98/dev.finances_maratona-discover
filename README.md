@@ -15,31 +15,31 @@
 ---
 
 <p align="center">
-  <span>O Projeto</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <span>Tecnologias</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <span>Como utilizar</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <span>Como contribuir</span>
+  <span>The Project</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <span>Technologies</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <span>How to use</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <span>Contribution</span>
 </p>
 
 ---
 
-![dev.finances](https://github.com/alicepsz98/dev.finances_maratona-discover/blob/master/mobile-dev.finances.gif)
+![Mockup](https://github.com/alicepsz98/dev.finances_maratona-discover/blob/master/mobile-dev.finances.gif)
 
 ---
 
-## 📝 O Projeto
+## 📝 The Project
 
-O dev.finances foi um projeto promovido pela Rocketseat. O projeto em si consiste em uma aplicação de controle financeiro, onde é possível cadastrar, excluir transações e ver o saldo de entrada e saída.
+Dev.finances was a project promoted by Rocketseat. The project itself consists of a financial control application, where it is possible to register, delete transactions and see the incoming and outgoing balance.
 
 ---
 
-## 💻 Tecnologias
+## 💻 Technologies
 
-### Ferramenta
+### Tools
 
 - Visual Studio Code
 
-### Linguagens
+### Languages
 
 - HTML
 - CSS
@@ -51,56 +51,56 @@ O dev.finances foi um projeto promovido pela Rocketseat. O projeto em si consist
 
 ---
 
-## 📦️ Como utilizar
+## 📦️ How to use
 
-- Para copiar o projeto, utilize os comandos:
+- To copy the project, use the commands:
 
 ```bash
-  # Clonar o repositório
+  # Clone the repository
   ❯ git clone https://github.com/alicepsz98/dev.finances_maratona-discover.git
 
-  # Entrar no diretório
+  # Enter directory
   ❯ cd dev.finances_maratona-discover
 ```
 
-- Para instalar as dependências e iniciar o projeto, você pode utilizar o Yarn ou NPM:
+- To install the dependencies and start the project, you can use Yarn or NPM:
 
-**Utilizando yarn**
+**Using yarn**
 
 ```bash
-  # Instalar as dependências
+  # Install the dependencies
   ❯ yarn
 
-  # Iniciar o projeto
+  # Start the project
   ❯ yarn dev:server
 ```
 
-**Utilizando npm**
+**Using npm**
 
 ```bash
-  # Instalar as dependências
+  # Install the dependencies
   ❯ npm install
 
-  # Iniciar o projeto
+  # Start the project
   ❯ npm start
 ```
 
 ---
 
-## 🤝 Como contribuir
+## 🤝 Contribution
 
-1. Faça o `fork` deste repositório
-2. Crie uma branch com sua feature:
-   - `$ git checkout -b minha_feature`
-3. Confirme sua branch:
-   - `$ git commit -m "feature: Meu novo recurso"`
-4. Envie sua branch:
-   - `$ git push origin minha_feature`
+1. `fork` this repository
+2. Create a branch with your feature:
+   - `$ git checkout -b my_feature`
+3. Confirm your branch:
+   - `$ git commit -m "feature: my new feature"`
+4. Send your branch:
+   - `$ git push origin my_feature`
 
 ---
 
 <p align="center">
-  Por Alice Souza 💚
+  by Alice Souza 💚
 </p>
 
  
